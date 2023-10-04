@@ -1,0 +1,311 @@
+<div class="container"> 
+    <div class="row col-12">
+  
+  
+      <div class="" style=" margin-top: 3%">
+          <p style="font-size: 16px">
+            Home <img src="assets/media/avatars/flech.svg" alt="" /> Tunisia
+            <img src="assets/media/avatars/flech.svg" alt="" /> Nabeul
+            <img src="assets/media/avatars/flech.svg" alt="" /> Hammamat
+          </p>
+      </div> <br>
+  
+      <div style="margin-top: 2%;">
+          <p style="font-size: 26px; font-weight: 800;">Pupput House</p>
+          
+          <p style="font-size: 20px; font-weight: 600;">
+            <img src="assets/media/avatars/etoil.svg" alt="Icône" style="width: 28px; height: 25px;"> 8.55
+            <a href="#" style="margin-left: 30px; font-weight: 500; font-size: 20px; text-decoration: underline; color: black;">3 Comments</a>
+            <span style="margin-left: 30px; font-size: 20px;">
+              Hammamat Medina
+            </span>
+          </p>
+        </div>
+      
+      <div class="row d-flex justify-content-evenly">
+       
+         <div class="col-xl-5" style="margin-top: 2%;">
+            <img src="assets/media/avatars/b3.jpg" alt="" style="width: 600px; height: 550px; border-radius: 3%;">
+         </div>
+  
+          <div class="col-xl-7 mt-11" >
+             <img src="assets/media/avatars/b1.jpg" alt="" style="width: 400px;  border-radius: 3%;"> 
+             <img src="assets/media/avatars/b1.jpg" alt="" style="width: 400px;  margin-left: 2%; border-radius: 3%;">
+             <img src="assets/media/avatars/b1.jpg" alt="" style="width: 400px;  border-radius: 3%; margin-top: 2%;"> 
+             <img src="assets/media/avatars/b1.jpg" alt="" style="width: 400px;  margin-left: 2%; border-radius: 3%; margin-top: 2%;">
+          </div>
+       
+      </div>
+  
+       <div class="row col-12 mt-6">
+          <div class="col-6" style="margin-top: 3%;">
+              <p style="font-size: 24px; font-weight: 800;">
+                  Pupput House
+              </p>
+              <p>
+               <span style="font-size: 15px; font-weight: 600;">.4 Nights</span> 
+               <span style="font-size: 15px; font-weight: 600; margin-left: 2%;">.2 Guests</span> 
+               <span style="font-size: 15px; font-weight: 600; margin-left: 2%;">.2 Bedrooms</span> 
+               <span style="font-size: 15px; font-weight: 600; margin-left: 2%;">.3 Beds</span> 
+               <span style="font-size: 15px; font-weight: 600; margin-left: 2%;">.2 Bathrooms</span> 
+               <span style="font-size: 15px; font-weight: 600; margin-left: 2%;">.1 Balcony</span> 
+              </p>
+              <hr style="width: 800px; font-weight: 700; margin-top: 4%;">
+  
+              <div class="row mt-20">
+                <!-- <p style="font-size: 18px; font-weight: 700;">
+                  About the Property
+                </p> <br>
+                <p style="font-size: 16px; font-weight: 500;">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem <br>
+                  Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+                  text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+                  standard dummy text Lorem Ipsum is simply dummy text of the printing and
+                </p>
+  
+                <div class="content">
+                   <p style="font-size: 16px; font-weight: 500;">
+                    Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+                    text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+                   </p>
+                </div>
+                 <a href="" style="text-align: start; font-weight: 400; font-size: 20px; text-decoration: underline; color: black; margin-top: 2%; margin-left: 70%;">Show More</a> -->
+                 <!-- <label for="check">Show More</label> -->
+  
+                 <p style="font-size: 24px; font-weight: 700;">
+                  About the Property
+                 </p> <br>
+  
+          <div [ngClass]="{'limitTextHeight': isReadMore}">
+            <p style="font-size: 16px; font-weight: 500;">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem is...<br>
+              Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+              text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+              standard dummy text Lorem Ipsum is simply dummy text of the printing and th propert <br>
+              Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+              text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+              standard dummy text Lorem Ipsum is simply dummy text of the printing and th propert <br>
+            </p>
+        </div>
+          <label type="" (click)="showText()" style="text-align: start; font-weight: 400; font-size: 20px; text-decoration: underline; color: black; margin-top: 2%; margin-left: 70%;">
+             {{ isReadMore ? 'Show More': 'Show Less' }}
+          </label>
+  
+                <div class="card" style="width: 19rem; height: 17rem; border-radius: 14%; background-color: #FFFFFF; margin-top: 6%;">
+                 
+                  <div class="card-body" style="margin-top: 16%;">  
+                  <img src="assets/media/avatars/ico2.svg" alt="" style="margin-bottom: 16%;" >
+                  <img src="assets/media/avatars/ico1.svg" alt="" style="margin-bottom: 16%; margin-left: 4%;" >
+                  <p class="card-title" style="font-size: 19px; font-weight: 700;">Bedroom 1</p>
+                    <p class="card-title" style="font-weight: 400; font-size: 14px;">1 Double Bed, 1 Safa</p>
+                  </div>
+                </div>
+                <div class="card" style="width: 19rem; height: 17rem; border-radius: 14%; background-color: #FFFFFF; margin-top: 6%; margin-left: 3%;">
+                 
+                  <div class="card-body" style="margin-top: 16%; ">  
+                  <img src="assets/media/avatars/ico1.svg" alt="" style="margin-bottom: 16%;" >
+                  
+                  <p class="card-title" style="font-size: 19px; font-weight: 700;">Bedroom 2</p>
+                    <p class="card-title" style="font-weight: 400; font-size: 14px;">2 Single Bed</p>
+                  </div>
+                </div>
+  
+              </div>
+              
+              <hr style="width: 800px; font-weight: 700; margin-top: 6%;">
+              
+              <div class="row" style="margin-top: 4%;">
+                  
+                  <p style="font-size: 20px; font-weight: 700;">
+                      Property Amenities
+                  </p>
+               <div class="row">
+                  <div class="col-4" style="margin-top: 3%;">
+                      <p> <img src="assets/media/avatars/i1.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Beach Access</span></p> <br>
+                      <p> <img src="assets/media/avatars/i2.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Wifi</span></p><br>
+                      <p> <img src="assets/media/avatars/i3.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Balcony</span></p> <br>
+                      <p> <img src="assets/media/avatars/i4.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Beach View</span></p> <br>
+                      <p> <img src="assets/media/avatars/i5.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Parking</span></p>
+  
+                  </div>
+                  <div class="row col-4" style="margin-left: 8%; margin-top: 3%;">
+                      <p> <img src="assets/media/avatars/i6.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Kitchen</span></p> <br>
+                      <p> <img src="assets/media/avatars/i7.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">2 TV</span></p><br>
+                      <p> <img src="assets/media/avatars/i8.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Coffee Machine</span></p> <br>
+                      <p> <img src="assets/media/avatars/i9.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Microwave</span></p> <br>
+                      <p> <img src="assets/media/avatars/i10.svg" alt="" style="width: 20px;"> <span style="margin-left: 18%; font-size: 16px; font-weight: 500;">Air Conditionner</span></p>
+  
+                  </div>            
+                </div>
+                  <button type="button"  class="btn" style="margin-left: 60%; background-color: #D8D9DB; width: 140px; height: 50px; border-radius: 8%;"><span style="font-size: 18px;">Show All</span></button>
+                  
+              </div>
+              
+              <hr style="width: 800px; font-weight: 700; margin-top: 6%;">
+  
+           <div class="row" style="margin-top: 4%;">
+  
+             <p style="font-size: 20px; font-weight: 600;">
+                <img src="assets/media/avatars/etoil.svg" alt="" style="width: 28px; height: 25px;"> 8.55
+  
+                <a href="#" style="margin-left: 30px; font-weight: 500; font-size: 20px; text-decoration: underline; color: black;">3 Comments</a>
+             
+             </p>
+              <div class="col-12">
+             <div class="col-6" style="margin-top: 4%; display: flex; align-items: center;">
+              <p style="font-size: 17px; font-weight: 400; margin-right: 10px; margin-top: 3%;">Cleanless</p>
+              <div style="border-radius: 4px; width: 130px; margin-left: 20%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);">
+                  <div style="border-radius: 4px; background-color: gray; height: 10px; width: 130px;"></div>
+              </div>
+  
+              <p style="font-size: 17px; font-weight: 400; margin-right: 10px; margin-top: 3%; margin-left: 30%;">Comfort</p>
+              <div style="border-radius: 4px; width: 130px; margin-left: 15%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);">
+                  <div style="border-radius: 4px; background-color: gray; height: 10px; width: 130px;"></div>
+              </div>
+            </div>
+            <div class="col-6" style="margin-top: 1%; display: flex; align-items: center;">
+              <p style="font-size: 17px; font-weight: 400; margin-right: 10px; margin-top: 3%;">Location</p>
+              <div style="border-radius: 4px; width: 130px; margin-left: 23%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);">
+                  <div style="border-radius: 4px; background-color: gray; height: 10px; width: 130px;"></div>
+              </div>
+  
+             
+              <p style="font-size: 17px; font-weight: 400; margin-right: 10px; margin-top: 3%; margin-left: 30%;">Noise</p>
+              <div style="border-radius: 4px; width: 130px; margin-left: 21%; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);">
+                  <div style="border-radius: 4px; background-color: gray; height: 10px; width: 130px;"></div>
+              </div>
+            </div>
+  
+            
+          </div> 
+          
+        
+          
+         
+           </div>
+  
+           <div class="row" style="margin-top: 12%; margin-left: 3%; display: flex; align-items: center;">
+              <p style="font-size: 20px; font-weight: 600;">
+                  <img src="assets/media/avatars/usr.png" alt="" style="width: 70px; "> <span style="margin-left: 3%;">Mouda</span> <br>
+    
+               </p>
+               <p style="font-size: 17px; font-weight: 500; margin-left: 2%; margin-top: 2%;">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem <br>
+                  Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+                  text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+              
+                </p>
+          </div>
+   
+          
+          <div class="row" style="margin-top: 10%; margin-left: 3%; display: flex; align-items: center;">
+              <p style="font-size: 20px; font-weight: 600;">
+                  <img src="assets/media/avatars/usr1.png" alt="" style="width: 70px; "> <span style="margin-left: 3%;">Amina</span> <br>
+    
+               </p>
+               <p style="font-size: 17px; font-weight: 500; margin-left: 2%; margin-top: 2%;">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem <br>
+                  Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy <br>
+                  text of the printing and typesetting industry.Lorem Ipsum has been the industry's <br>
+              
+                </p>
+          </div>
+          
+          <div class="form-floating" style="margin-top: 6%; margin-left: 6%;">
+              <div style="display: flex; align-items: center;">
+                  <input type="text" class="form-control" id="floatingInput" style="padding-right: 30px; background-image: url('assets/media/avatars/com.svg'); background-repeat: no-repeat; background-position: right center;">
+              </div>
+          </div>
+          
+          <hr style="width: 800px; font-weight: 500; margin-top: 6%;">
+  
+          <div class="row" style="margin-top: 5%;">
+          
+              <p style="font-size: 20px; font-weight: 700; margin-left: 5%;">
+                  Location
+                </p> <br>
+  
+               <p style="margin-top: 3/5%; margin-left: 1%;">
+                  <img src="assets/media/avatars/map11.png" alt="" style="width: 760px;">
+               </p>
+               <p style="font-size: 17px; font-weight: 500; margin-left: 1%; margin-top: 3%;">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem <br>
+                  Ipsum has been the industry's standard dummy text Lorem Ipsum is simply dummy 
+               </p>
+          </div>
+  
+  
+          </div>
+       
+  
+        
+            <div class="col-6" style="margin-top: 3%; ">
+           
+  
+              <div class="card" style="width: 47rem; height: 60rem;  border-radius: 5%; background-color: #FFFFFF; box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16)">
+                  <div class="card-body">
+                    <div class="row">
+                    <p class="card-title" style="font-size: 30px; color: #EF4064; font-weight: 700;margin-top: 4%; margin-left: 2%;">40.5 <span style="color: #EF4064; font-weight: 700;">TND</span> <span style="color: black; font-size: 23px;"> Nights</span></p>
+                    <div class=" col-4" style="margin-top: 6%; margin-left: 4%;">
+                      <p style="margin-top: 12%; margin-left: 6%; font-size: 20px; font-weight: 700;">Check In</p>
+                      <p style="margin-top: 12%; margin-left: 6%; font-size: 16px; font-weight: 500;">21, July, 2023</p>
+                      </div>
+                    <div class="row col-4" style="margin-top: 6%; margin-left: 14%;">
+                      <p style="margin-top: 12%; margin-left: 6%; font-size: 20px; font-weight: 700;">Check Out</p>
+                      <p style="margin-top: 2%; margin-left: 6%; font-size: 16px; font-weight: 500;">24, July, 2023</p>
+                      </div>
+                    </div>
+                    <hr style="width: 550px; font-weight: 500; margin-top: 2%;">
+  
+                    <div class="row col-4" style="margin-top: 6%; margin-left: 4%;">
+                      <p style="margin-top: 12%; margin-left: 6%; font-size: 20px; font-weight: 700;">Guests</p>
+                      <p style="margin-top: 2%; margin-left: 6%; font-size: 16px; font-weight: 500;">2 Adults</p>
+                      </div>
+  
+                      <hr style="width: 550px; font-weight: 500; margin-top: 2%;">
+  
+                      <button type="button" class="btn btn-secondary"
+                      style="background-color: #EF4064; width: 520px; height: 50px; border-radius: 10px; margin-left: 3%; margin-top: 2%;">
+                      <p style="color: white; font-weight: bold; font-size: 20px;">Book Now</p>
+                    </button>
+  
+                    <div class="row mt-4">
+                      <div class="col-4" style="margin-top: 6%; margin-left: 4%;">
+                        <p style="font-size: 19px; font-weight: 500;">Night Sold</p>
+                        <p style="font-size: 19px; font-weight: 500;">Night Price</p>
+                        <p style="font-size: 19px; font-weight: 500;">Tax</p>
+                      </div>
+                      <div class="col-4" style="margin-top: 6%; margin-left: 24%;">
+                        <p style="font-size: 19px; font-weight: 500; text-align: end;">4 Night</p>
+                        <p style="font-size: 19px; font-weight: 500; text-align: end;">48 TND</p>
+                        <p style="font-size: 19px; font-weight: 500; text-align: end;">20 TND</p>
+                      </div>
+                    </div>
+                    
+                    <hr style="width: 550px; font-weight: 500; margin-top: 2%;">
+  
+  
+                    <div class="row mt-2">
+                      <div class="col-4" style="margin-top: 6%; margin-left: 4%;">
+                        <p style="font-size: 19px; font-weight: 600;">Total</p>
+                     
+                      </div>
+                      <div class="col-4" style="margin-top: 6%; margin-left: 24%;">
+  
+                        <p style="font-size: 19px; font-weight: 600; text-align: end;">400.5 TND</p>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div>
+           </div>
+  
+           
+           </div>
+       </div>
+  
+  
+  
+  
+    </div>
+  

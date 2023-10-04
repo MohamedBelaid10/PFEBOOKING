@@ -1,0 +1,43 @@
+
+
+.background{
+
+    background-size: cover;
+    background-position: center;
+    height: calc(100%);
+    max-height: 600px;
+    padding:  2px;
+    
+    }
+    
+    .card{
+    
+        //width: 22rem;
+         height: 420px; 
+         border-radius: 25px 25px 25px 25px;
+         
+    
+    }
+    
+    
+    
+      .card .media-icons {
+    
+        position: absolute;
+        top: 40px;
+        right: 35px;
+      }
+      
+
+
+    
+    /* Media query for mobile devices with a maximum width of, let's say, 767px */
+@media (max-width: 767px) {
+        .bottom-spacing {
+            height: 200px;
+        }
+    }
+
+
+
+    
