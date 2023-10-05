@@ -3,8 +3,7 @@
 <div class="container">
   <div class="row col-12">
 <div class="background"  style="
-            
-
+          
 background-image: url('assets/media/avatars/back.jpg') ;"
  >
                     
@@ -43,8 +42,8 @@ background-image: url('assets/media/avatars/back.jpg') ;"
               <p class="card-text">{{ property.fullAdress }}</p>
               <p class="card-text" style="font-size: 15px; font-weight: 400;">{{ property.date }}</p>
               <p class="card-text" style="text-align: start; font-weight: 600;">
-                <del style="color: #888; font-size: 14px; font-weight: bold; margin-right: 10px;">{{ property.price }} $/par Night</del>
-                <span style="color: #EF4064; font-size: 16px; font-weight: bold; margin-left: 30px;">{{ property.price * 0.5 }} $</span> /par Night
+                <del style="color: #888; font-size: 15px; font-weight: bold; text-align: start;">{{ property.price }} $/par Night</del>
+                <span style="color: #EF4064; font-size: 18px; font-weight: bold; margin-left: 100px;">{{ property.price * 0.5 }} $</span> /par Night
               </p>
             </div>
           </div>
@@ -306,207 +305,44 @@ background-image: url('assets/media/avatars/back.jpg') ;"
     <h3 style="font-size: 24px; font-weight: 700;">Our Guests Adore...</h3>
   </div>
 
-  <div class="container">
-    <div class="row d-flex flex-justify-space-beetween">
   
-        <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/maisson.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
+  <carousel [itemsPerSlide]="itemsPerSlide" [singleSlideOffset]="false" [interval]="0" [indicatorsByChunk]="true">
+    <slide *ngFor="let property of getTopRatedProperties(6)">
+      <div class="container mt-7">
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="card mb-4" style="width: 460px; height: 460px;">
+              <img [src]="property.imageUrl" class="card-img-top" alt="Property Image"
+                style="width: 420px; height: 290px; border-radius: 5%; margin-left: 4%; margin-top: 3%;">
+              <div class="card-body">
+                <p style="position: absolute; top: 320px; right: 15px; font-size: 18px; font-weight: 400;">
+                  <img src="assets/media/avatars/etoil.svg" alt="Icône" style="width: 20px; height: 20px; margin-right: 5px;">
+                  {{ property.rating }}
+                </p>
+                <h5 class="card-title">{{ property.name }}</h5>
+                <p class="card-text">{{ property.fullAdress }}</p>
+                <p class="card-text" style="text-align: start; font-weight: 600; margin-top: 8%;">
+                  <del style="color: #888; font-size: 15px; font-weight: bold; text-align: start;">{{ property.price }} $/par Night</del>
+                  <span style="color: #EF4064; font-size: 18px; font-weight: bold; margin-left: 100px;">{{ formatNumberWithThreeDecimals(property.price * (1 - property.discount / 100)) }} $</span>/par Nuit
+                </p>
+              </div>
+            </div>
+        
           </div>
         </div>
       </div>
+    </slide>
+  </carousel>
   
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed1.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed2.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/salon.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Répétez la même structure pour les autres cartes -->
-  
-    </div>
-  </div>
-   
-  <div class="container" style="margin-top: 3%;">
-    <div class="row d-flex flex-justify-space-beetween">
-  
-        <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/maisson.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed1.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/bed2.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col-xl" style="margin-top: 2%;" >
-        <div class="card">
-          <div style="margin-top: 5%; margin-left: 4%; margin-right: 5%;">
-          <img src="assets/media/avatars/salon.jpg" class="card-img-top" alt="..." style="height: 270px; border-radius: 5%;">
-        </div>
-          <div class="media-icons">
-            <i><img src="assets/media/avatars/favoris.svg" alt="" style="width: 22px;"></i>
-          </div>
-          <div class="card-body" style="margin-top: 1%;">
-            <h5 class="card-title">1 Chambre Avec Balcon</h5>
-            <p class="card-text">Dubai, Marina, Dubai, Tour Dec 2, <br> Appartement, Émirats Arabes Unis</p>
-            <p class="card-text" style="text-align: start;">
-              <span style="color: #EF4064; font-size: 15px; font-weight: bold;">40.5 $</span>/par Nuit
-            </p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Répétez la même structure pour les autres cartes -->
+
   
     </div>
   </div>
 
  <div class="bottom-spacing">
 
- </div>
+</div>
 
-</div>
-</div>
 
 <router-outlet></router-outlet>

@@ -10,12 +10,13 @@ import { LayoutService } from 'src/app/_metronic/layout/layout.service';
 })
 export class DashboardComponent implements OnInit {
   only_one_day_offers: null;
-  weekly_exceptionals: null;
+ 
   explore_in_areas: any;
   explore_in_areasUrls: any;
-  
-  itemsPerSlide = 3;
  
+  itemsPerSlide = 3;
+  http: any;
+  weekly_exceptionals: any[] = []; 
    
   constructor(private router: Router,public cdr: ChangeDetectorRef,
     
@@ -33,10 +34,14 @@ export class DashboardComponent implements OnInit {
 
 
   loadProperties(){
+
+
     this.only_one_day_offers = null;
-    this.weekly_exceptionals = null;
+    this.weekly_exceptionals
     let weekly_exceptionalsIds: any;
     let only_one_day_offersIds: any;
+
+    
     // Start both API requests simultaneously
     forkJoin([
       this.layoutService.get_offers(),
@@ -50,6 +55,12 @@ export class DashboardComponent implements OnInit {
       this.explore_in_areasUrls = resOffers.explore_in_areas.map((x: any) => x.replace(/ /g, '%20'));
       weekly_exceptionalsIds = resOffers.weekly_exceptionals;
       only_one_day_offersIds = resOffers.only_one_day_offers;
+
+     
+
+      this.only_one_day_offers = only_one_day_offersIds.filter((x: any) =>
+        x.fullAdress
+      );
       // Process the result of the second API request using data from the first
       const filteredDaily = only_one_day_offersIds.map((item: any) => {
         const matchingWeeklyExceptional = response.find((exceptional: any) => exceptional.airbetterId === item.airbetterId);
@@ -71,11 +82,18 @@ export class DashboardComponent implements OnInit {
       console.log(filteredDaily);
       this.weekly_exceptionals = filteredWeekly.filter((x: any) => x.fullAdress);
       this.changestatus();
+
+
+
+
     });
 
-  
+
 
    }
+  selectRandomProperties(randomProperties: any[], arg1: number): any[] {
+    throw new Error('Method not implemented.');
+  }
 
 
   currency(currency: any) {
@@ -86,12 +104,27 @@ export class DashboardComponent implements OnInit {
     return value.toFixed(3);
   }
 
+  getTopRatedProperties(count: number): any[] {
+    
+    if (this.weekly_exceptionals && this.weekly_exceptionals.length > 0) {
+   
+      return this.weekly_exceptionals.sort((a, b) => b.rating - a.rating).slice(0, count);
+    } else {
+ 
+      return [];
+    }
+  }
   
    changestatus(): void {
     setTimeout(() => {
       this.cdr.detectChanges()
       this.cdr.markForCheck()
     }, 300)
+  
   }
+
+
+
+  
 
 }
