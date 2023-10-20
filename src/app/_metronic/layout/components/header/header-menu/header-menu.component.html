@@ -7,45 +7,55 @@
  
  
   <div class="d-flex justify-content-between" style="margin-top: 0.5%;">
- 
+   
     <div class="input-group">
-      <div class="d-flex">
+      <form [formGroup]="searchForm">
+      <div class="d-flex align-items-center">
+        <!-- Destination Select -->
         <div class="position-relative">
-          <select class="form-select" aria-label="Default select example">
-        
-            <option selected>Destination</option>
+          <select class="form-select" formControlName="area" aria-label="Default select example">
+           
             <option *ngFor="let emirateArea of emirateAreas" [value]="emirateArea">
               {{ emirateArea }}
             </option>
           </select>
           <span style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%);">
-          
+            <!-- Add an icon or arrow here if needed -->
           </span>
         </div>
     
-        <div class="position-relative ms-2" style="margin-left: 2%;">
-          <input type="text" aria-label="Last name" class="form-control my-input" placeholder="Check In _ Check Out" style="width: 200px; text-align: center; height: 50px;">
+        <!-- Date Range Picker -->
+        <div class="form-group">
+          <label for="datefrom">From Date:</label>
+          <input type="date" id="datefrom" formControlName="datefrom" class="form-control">
+        </div>
+      
+        <div class="form-group">
+          <label for="dateto">To Date:</label>
+          <input type="date" id="dateto" formControlName="dateto" class="form-control">
+        </div>
+
+        <div class="position-relative">
+          <input type="number" class="form-control" formControlName="nb_adult" placeholder="Guests" aria-label="Guests">
           <span style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%);">
-            <i class="fas fa-calendar"></i>
           </span>
         </div>
         
-        <div class="position-relative ms-2">
-          <input type="text" aria-label="Last name" class="form-control" placeholder="Guests" style="width: 100px; text-align: center; height: 50px;">
-          <span style="position: absolute; top: 50%; left: 5px; transform: translateY(-50%);">
-            <i class="fas fa-users"></i>
-          </span>
-        </div>
+        
     
-        <div class="ms-2">
+        <!-- Search Button -->
+  
+     
+        <div class="ms-2" (click)="  saveCall()">
           <div style="background-color: #EF4064; border-radius: 15px; width: 50px; height: 50px; display: flex; justify-content: center; align-items: center; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); cursor: pointer;">
             <img src="assets/media/avatars/scope.png" style="width: 40px; height: 40px;">
           </div>
+          
         </div>
       </div>
+    </form>
     </div>
     
- </div>
  
  
  

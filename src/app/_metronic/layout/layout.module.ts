@@ -23,6 +23,10 @@ import { PageTitleComponent } from './components/header/page-title/page-title.co
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
 import { DrawersModule, DropdownMenusModule, ModalsModule, EngagesModule} from '../partials';
 import {EngagesComponent} from "../partials/layout/engages/engages.component";
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; // Importez HttpClientModule
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -51,6 +55,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     TranslationModule,
+    HttpClientModule,
     InlineSVGModule,
     NgbDropdownModule,
     NgbProgressbarModule,
@@ -58,9 +63,13 @@ const routes: Routes = [
     ModalsModule,
     DrawersModule,
     EngagesModule,
+    ReactiveFormsModule,
     DropdownMenusModule,
     NgbTooltipModule,
     TranslateModule,
+    BsDatepickerModule.forRoot(),
+    FormsModule
+    
   ],
   exports: [RouterModule],
 })

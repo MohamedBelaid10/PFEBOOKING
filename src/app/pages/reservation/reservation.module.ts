@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReservationComponent } from './reservation.component';
 import { WidgetsModule } from 'src/app/_metronic/partials';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -10,7 +11,7 @@ import { WidgetsModule } from 'src/app/_metronic/partials';
   declarations: [],
   imports: [
     CommonModule,
-
+    NgxPaginationModule,
     RouterModule.forChild([
       {
         path: '',

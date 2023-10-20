@@ -16,6 +16,9 @@ import { FakeAPIService } from './_fake/fake-api.service';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { DescriptionComponent } from './pages/description/description.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+
+import { NgxPaginationModule } from 'ngx-pagination';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -31,6 +34,7 @@ function appInitializer(authService: AuthService) {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgxPaginationModule,
     TranslateModule.forRoot(),
     HttpClientModule,
     ClipboardModule,
@@ -46,6 +50,7 @@ function appInitializer(authService: AuthService) {
     InlineSVGModule.forRoot(),
     NgbModule,
     CarouselModule.forRoot(),
+    BsDatepickerModule.forRoot(),
   ],
   providers: [
     {
